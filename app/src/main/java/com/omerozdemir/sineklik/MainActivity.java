@@ -3,7 +3,7 @@ package com.omerozdemir.sineklik;
 import androidx.appcompat.app.AppCompatActivity;
 
 
-
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
@@ -52,8 +52,15 @@ public class MainActivity extends AppCompatActivity {
             } else if (kahveText.isChecked() && kapiText.isChecked()) {
             double result = (number1 + number2) * 2 / 100 * 16.9 + 5 + (number2 / 100 * 8.64 + 5);
             resultText.setText("kahve kapi Sonuç:" + result);
+
             }
         }
+        
+    }
+    public void changeScreen(View view){
+        Intent intent = new Intent(MainActivity.this,MainActivity2.class);
+       // intent.getStringExtra("name",);
+        startActivity(intent);
     }
 }
 
