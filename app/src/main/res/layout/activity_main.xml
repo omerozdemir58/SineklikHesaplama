@@ -84,7 +84,7 @@
         android:layout_marginStart="8dp"
         android:layout_marginBottom="94dp"
         android:onClick="changeScreen"
-        android:text="Button"
+        android:text="Safya 2"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="@+id/button" />
 

@@ -40,17 +40,19 @@ public class MainActivity extends AppCompatActivity {
         else{
             double number2 = Double.parseDouble(yukseklik.getText().toString());//Double türüne çeviriyoruz.
             double number1 = Double.parseDouble(genislik.getText().toString());
+            number2 = number2 / 100;
+            number1 = number1 / 100;
             if (beyazText.isChecked() && pencereText.isChecked()) {
-            double result = (number1 + number2) * 2 / 100 * 15.9 + 5 + (number2 / 100 * 8.64);
-            resultText.setText("beyaz pencere  Sonuç:" + result);//Bunu stringe çevirmemiz gerekiyor ancak bu şeklide yazınca kendisi
+            double result = (number1 + number2) * 2 * 16.65 + ((number2 + 0.05) * 8.8) + 9;
+            resultText.setText("beyaz pencere  Sonuç:" + result);
         } else if (beyazText.isChecked() && kapiText.isChecked()) {
-            double result = (number1 + number2) * 2 / 100 * 15.9 + 5 + (number2 / 100 * 8.64 + 5);
+            double result = (number1 + number2) * 2 * 16.65 + ((number2 + 0.05) * 8.8) + (number1 * 15.85)+ 11;
             resultText.setText("beyaz kapi Sonuç:" + result);
         } else if (kahveText.isChecked() && pencereText.isChecked()) {
-            double result = (number1 + number2) * 2 / 100 * 16.9 + 5 + (number2 / 100 * 8.64);
+            double result = (number1 + number2) * 2 * 17.65 + ((number2 + 0.05) * 8.8) + 9;
             resultText.setText("kahve pencere Sonuç:" + result);
             } else if (kahveText.isChecked() && kapiText.isChecked()) {
-            double result = (number1 + number2) * 2 / 100 * 16.9 + 5 + (number2 / 100 * 8.64 + 5);
+            double result =  (number1 + number2) * 2 * 17.65 + ((number2 + 0.05) * 8.8) + (number1 * 15.85)+ 11;
             resultText.setText("kahve kapi Sonuç:" + result);
 
             }
