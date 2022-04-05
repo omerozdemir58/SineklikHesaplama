@@ -40,20 +40,21 @@ public class MainActivity extends AppCompatActivity {
         else{
             double number2 = Double.parseDouble(yukseklik.getText().toString());//Double türüne çeviriyoruz.
             double number1 = Double.parseDouble(genislik.getText().toString());
+            double result2 = 0;
             number2 = number2 / 100;
             number1 = number1 / 100;
             if (beyazText.isChecked() && pencereText.isChecked()) {
-            double result = (number1 + number2) * 2 * 16.65 + ((number2 + 0.05) * 8.8) + 9;
-            resultText.setText("beyaz pencere  Sonuç:" + result);
+            result2 = (number1 + number2) * 2 * 16.65 + ((number2 + 0.05) * 8.8) + 9;
+            resultText.setText("beyaz pencere  Sonuç:" + result2);
         } else if (beyazText.isChecked() && kapiText.isChecked()) {
-            double result = (number1 + number2) * 2 * 16.65 + ((number2 + 0.05) * 8.8) + (number1 * 15.85)+ 11;
-            resultText.setText("beyaz kapi Sonuç:" + result);
+            result2 = (number1 + number2) * 2 * 16.65 + ((number2 + 0.05) * 8.8) + (number1 * 15.85)+ 11;
+            resultText.setText("beyaz kapi Sonuç:" + result2);
         } else if (kahveText.isChecked() && pencereText.isChecked()) {
-            double result = (number1 + number2) * 2 * 17.65 + ((number2 + 0.05) * 8.8) + 9;
-            resultText.setText("kahve pencere Sonuç:" + result);
-            } else if (kahveText.isChecked() && kapiText.isChecked()) {
-            double result =  (number1 + number2) * 2 * 17.65 + ((number2 + 0.05) * 8.8) + (number1 * 15.85)+ 11;
-            resultText.setText("kahve kapi Sonuç:" + result);
+            result2 = (number1 + number2) * 2 * 17.65 + ((number2 + 0.05) * 8.8) + 9;
+            resultText.setText("kahve pencere Sonuç:" + result2);
+        } else if (kahveText.isChecked() && kapiText.isChecked()) {
+            result2 =  (number1 + number2) * 2 * 17.65 + ((number2 + 0.05) * 8.8) + (number1 * 15.85)+ 11;
+            resultText.setText("kahve kapi Sonuç:" + result2);
 
             }
         }
@@ -62,6 +63,7 @@ public class MainActivity extends AppCompatActivity {
     public void changeScreen(View view){
         Intent intent = new Intent(MainActivity.this,MainActivity2.class);
        // intent.getStringExtra("name",);
+       // resultText.setText("deneme"+ result2);
         startActivity(intent);
     }
 }
