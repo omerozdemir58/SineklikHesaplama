@@ -15,9 +15,12 @@ TextView textView;
         setContentView(R.layout.activity_main2);
         textView = findViewById(R.id.textView3);
 
+        Intent intent = getIntent();
+        String result = intent.getStringExtra(Intent.EXTRA_TEXT);
+        textView.setText(result);
+
     }
     public void changeActivity(View view){
-
         Intent intent = new Intent(MainActivity2.this,MainActivity.class);
         startActivity(intent);
     }

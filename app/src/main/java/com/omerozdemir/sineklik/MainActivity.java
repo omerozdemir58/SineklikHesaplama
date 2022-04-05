@@ -18,7 +18,8 @@ public class MainActivity extends AppCompatActivity {
     RadioButton kahveText;
     RadioButton kapiText;
     RadioButton pencereText;
-    
+    double result2 = 0;
+    String yaz;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -38,16 +39,15 @@ public class MainActivity extends AppCompatActivity {
             resultText.setText("Değer Girin");
         }
         else{
-            double number2 = Double.parseDouble(yukseklik.getText().toString());//Double türüne çeviriyoruz.
-            double number1 = Double.parseDouble(genislik.getText().toString());
-            double result2 = 0;
+            float number2 = Float.parseFloat(yukseklik.getText().toString());//Double türüne çeviriyoruz.
+            float number1 = Float.parseFloat(genislik.getText().toString());
             number2 = number2 / 100;
             number1 = number1 / 100;
             if (beyazText.isChecked() && pencereText.isChecked()) {
             result2 = (number1 + number2) * 2 * 16.65 + ((number2 + 0.05) * 8.8) + 9;
             resultText.setText("beyaz pencere  Sonuç:" + result2);
         } else if (beyazText.isChecked() && kapiText.isChecked()) {
-            result2 = (number1 + number2) * 2 * 16.65 + ((number2 + 0.05) * 8.8) + (number1 * 15.85)+ 11;
+            result2 = (number1 + number2) * 2 * 16.65 + ((number2 + 0.05) * 8.8) + (number1 * 16.65)+ 11;
             resultText.setText("beyaz kapi Sonuç:" + result2);
         } else if (kahveText.isChecked() && pencereText.isChecked()) {
             result2 = (number1 + number2) * 2 * 17.65 + ((number2 + 0.05) * 8.8) + 9;
@@ -57,14 +57,14 @@ public class MainActivity extends AppCompatActivity {
             resultText.setText("kahve kapi Sonuç:" + result2);
 
             }
+            yaz = String.format("%f x %f",number1,number2*100);
         }
-        
     }
     public void changeScreen(View view){
-        Intent intent = new Intent(MainActivity.this,MainActivity2.class);
-       // intent.getStringExtra("name",);
-       // resultText.setText("deneme"+ result2);
-        startActivity(intent);
+        String res = String.valueOf(yaz);
+        Intent intent = new Intent(this,MainActivity2.class);
+        intent.putExtra(Intent.EXTRA_TEXT,res);
+       startActivity(intent);
     }
 }
 
