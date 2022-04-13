@@ -66,9 +66,9 @@
     <Button
         android:id="@+id/button"
         android:layout_width="116dp"
-        android:layout_height="52dp"
-        android:layout_marginTop="6dp"
-        android:layout_marginBottom="14dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="12dp"
         android:onClick="result"
         android:text="Hesapla"
         android:textSize="16sp"
@@ -82,7 +82,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
-        android:layout_marginBottom="94dp"
+        android:layout_marginBottom="95dp"
         android:onClick="changeScreen"
         android:text="Safya 2"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -90,10 +90,10 @@
 
     <RadioGroup
         android:id="@+id/buttonGroup1"
-        android:layout_width="104dp"
-        android:layout_height="95dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginEnd="59dp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="19dp"
+        android:layout_marginEnd="63dp"
         app:layout_constraintBottom_toBottomOf="@+id/buttonGroup2"
         app:layout_constraintEnd_toStartOf="@+id/buttonGroup2"
         app:layout_constraintStart_toStartOf="parent"
@@ -117,7 +117,7 @@
         android:layout_width="wrap_content"
         android:layout_height="93dp"
         android:layout_marginTop="21dp"
-        android:layout_marginEnd="56dp"
+        android:layout_marginEnd="59dp"
         app:layout_constraintEnd_toStartOf="@+id/radioGroup"
         app:layout_constraintStart_toEndOf="@+id/buttonGroup1"
         app:layout_constraintTop_toBottomOf="@+id/yukseklik">
@@ -140,28 +140,38 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="19dp"
-        android:layout_marginEnd="16dp"
+        android:layout_marginEnd="19dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/buttonGroup2"
         app:layout_constraintTop_toBottomOf="@+id/yukseklik">
 
         <RadioButton
-            android:id="@+id/radioButton5"
+            android:id="@+id/sabitText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Sabit" />
 
         <RadioButton
-            android:id="@+id/radioButton4"
+            android:id="@+id/solText"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Sol" />
 
         <RadioButton
-            android:id="@+id/radioButton3"
+            android:id="@+id/sagText"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Sağ" />
     </RadioGroup>
+
+    <Button
+        android:id="@+id/button4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:onClick="save"
+        android:text="Kaydet"
+        app:layout_constraintBaseline_toBaselineOf="@+id/button3"
+        app:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
