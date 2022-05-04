@@ -58,22 +58,22 @@ public class MainActivity extends AppCompatActivity {
             number1 = number1 / 100;
 
             if (beyazText.isChecked() && pencereText.isChecked() && sabitText.isChecked()) {
-            result2 = (number1 + number2) * 2 * 16.65 + ((number2 + 0.05) * 8.8) + 9;
+            result2 = (number1 + number2) * 2 * 15.42 + ((number2 + 0.05) * 8.8) + 9;
             resultText.setText("Beyaz Pencere Sonuç:" + result2);
             ozellik = "Beyaz Pencere Sabit";
 
         } else if (beyazText.isChecked() && kapiText.isChecked()) {
-            result2 = (number1 + number2) * 2 * 16.65 + ((number2 + 0.05) * 8.8) + (number1 * 16.65)+ 11;
+            result2 = (number1 + number2) * 2 * 15.42 + ((number2 + 0.05) * 8.8) + (number1 * 15.42)+ 11;
             resultText.setText("beyaz kapi Sonuç:" + result2);
                 ozellik = "Beyaz Kapı";
         } else if (kahveText.isChecked() && pencereText.isChecked()) {
             result2 = (number1 + number2) * 2 * 17.65 + ((number2 + 0.05) * 8.8) + 9;
             resultText.setText("kahve pencere Sonuç:" + result2);
-                ozellik = "Beyaz Pencere";
+                ozellik = "Kahverengi Pencere";
         } else if (kahveText.isChecked() && kapiText.isChecked()) {
             result2 =  (number1 + number2) * 2 * 17.65 + ((number2 + 0.05) * 8.8) + (number1 * 15.85)+ 11;
             resultText.setText("kahve kapi Sonuç:" + result2);
-                ozellik = "Beyaz Pencere";
+                ozellik = "Kahverengi Kapı";
 
             }
             number1*=100;
